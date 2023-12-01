@@ -22,4 +22,5 @@ end)
 lsp_zero.setup_servers({
 	'terraformls',
 	'pyright',
+    'rust_analyzer',
 })
