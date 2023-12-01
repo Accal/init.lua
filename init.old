@@ -19,12 +19,13 @@ call plug#begin()
 	Plug 'tpope/vim-repeat'
 	Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 	Plug 'kyazdani42/nvim-web-devicons'
-	Plug 'mileszs/ack.vim'
  	Plug 'itchyny/lightline.vim'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 " Map FzF to C-P
 nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
+nnoremap <c-L> <cmd>lua require('fzf-lua').live_grep()<CR>
 
 " Set up emterprise github url for vim-fugitive
 let g:github_enterprise_urls = ['https://github.beeone.at']
